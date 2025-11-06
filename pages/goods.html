@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Товары</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Товары</title>
+  <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">Хэдер</div>
+  <div class="page-container">
+    <div class="header">Хэдер</div>
 
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Практики</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
 
-    <div id="content">
-        <h2>Каталог товаров</h2>
+    <main class="content">
+      <h1 class="profile-title">Каталог товаров</h1>
 
-        <div>
-            <img src="../images/goods1.jpg" alt="Товар 1" width="200">
-            <p><b>Наушники SuperSound</b></p>
-            <p>Цена: 2990 ₽</p>
-        </div>
+      <section class="experience-card">
+        <div class="experience-title">Наушники SuperSound</div>
+        <p class="experience-desc"><img src="../images/goods1.jpg" alt="Товар 1" style="width:100%;max-width:460px;border-radius:12px;"></p>
+        <p class="experience-desc"><b>Цена: 2 990 ₽</b></p>
+      </section>
 
-        <div>
-            <img src="../images/goods2.jpg" alt="Товар 2" width="200">
-            <p><b>Клавиатура RGB-Pro</b></p>
-            <p>Цена: 4590 ₽</p>
-        </div>
+      <section class="experience-card">
+        <div class="experience-title">Клавиатура RGB-Pro</div>
+        <p class="experience-desc"><img src="../images/goods2.jpg" alt="Товар 2" style="width:100%;max-width:460px;border-radius:12px;"></p>
+        <p class="experience-desc"><b>Цена: 4 590 ₽</b></p>
+      </section>
 
-        <div>
-            <img src="../images/goods3.jpg" alt="Товар 3" width="200">
-            <p><b>Мышь Logitech</b></p>
-            <p>Цена: 1890 ₽</p>
-        </div>
-    </div>
+      <section class="experience-card">
+        <div class="experience-title">Мышь UltraClick</div>
+        <p class="experience-desc"><img src="../images/goods3.jpg" alt="Товар 3" style="width:100%;max-width:460px;border-radius:12px;"></p>
+        <p class="experience-desc"><b>Цена: 1 890 ₽</b></p>
+      </section>
+    </main>
 
-    <div id="footer">Футер</div>
+    <footer class="footer">Футер</footer>
+  </div>
 </body>
 </html>

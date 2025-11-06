@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новости</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Новости</title>
+  <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
-    <div id="header">Хэдер</div>
+  <div class="page-container">
+    <div class="header">Хэдер</div>
 
-    <div id="menu">
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Практики</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
+        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
 
-    <div id="content">
-        <h2>Новости проекта</h2>
+    <main class="content">
+      <h1 class="profile-title">Новости проекта</h1>
 
-        <div>
-            <h3>Запуск нового сайта</h3>
-            <p><i>05.11.2025, автор: Скворцов Александр</i></p>
-            <p>Сегодня был запущен новый сайт портфолио. Структура полностью готова к заполнению.</p>
-        </div>
+      <article class="experience-card">
+        <div class="experience-title">Запуск сайта</div>
+        <p class="experience-desc"><i>05.11.2025, автор: Александр</i></p>
+        <p class="experience-desc">Стартовая версия доступна на GitHub Pages.</p>
+      </article>
 
-        <div>
-            <h3>Добавлены новые товары</h3>
-            <p><i>02.11.2025, автор: Администратор</i></p>
-            <p>В каталог добавлены три новых устройства для работы и развлечений.</p>
-        </div>
+      <article class="experience-card">
+        <div class="experience-title">Добавлены товары</div>
+        <p class="experience-desc"><i>02.11.2025, администратор</i></p>
+        <p class="experience-desc">В каталоге появились три новые позиции.</p>
+      </article>
 
-        <div>
-            <h3>Подготовка к защите</h3>
-            <p><i>01.11.2025, автор: Александр</i></p>
-            <p>Ведется активная работа над завершением семестрового проекта по дисциплине.</p>
-        </div>
-    </div>
+      <article class="experience-card">
+        <div class="experience-title">Готовимся к защите</div>
+        <p class="experience-desc"><i>01.11.2025, Александр</i></p>
+        <p class="experience-desc">Верстаем страницы и шлифуем стили.</p>
+      </article>
+    </main>
 
-    <div id="footer">Футер</div>
+    <footer class="footer">Футер</footer>
+  </div>
 </body>
 </html>
