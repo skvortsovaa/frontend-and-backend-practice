@@ -1,52 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Товары</title>
-  <link rel="stylesheet" href="../style/styles.css">
-</head>
-<body>
-  <div class="page-container">
-    <div class="header">Хэдер</div>
+<html lang="ru"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Товары</title> 
+        <link rel="stylesheet" href="../style/styles.css"> 
+    </head> 
+    <body> 
+        <!-- Изменение: Заменили div на семантические теги -->
+        <div class="page-container">
+            <header class="header"> <!-- Было: <div class="header"> -->
+                <h1>Каталог товаров</h1> <!-- Добавили заголовок для семантики -->
+            </header>
 
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
+            <nav class="nav"> <!-- Было: <div class="nav"> -->
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>  
+                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
 
-   <main class="content">
-  <h1 class="profile-title">Наши товары</h1>
+            <main class="content"> <!-- Было: <div class="content"> -->
+                <section> <!-- Логический раздел каталога -->
+                    <h2 class="section-title">Популярные позиции</h2>
 
-  <section class="goods-section">
-    <div class="cards">
-      <article class="card goods-card">
-        <img src="../images/goods1.jpg" alt="Товар 1">
-        <div class="card-title">Товар 1</div>
-        <div class="card-price">Цена товара 1</div>
-      </article>
+                    <div class="products-grid"> <!-- Grid для карточек товаров -->
+                        <article class="product-card"> <!-- Карточка товара -->
+                            <img class="product-image" src="../images/goods1.jpg" alt="Товар 1">
+                            <h3 class="product-name">Товар 1</h3>
+                            <p class="product-price">1 990 ₽</p>
+                        </article>
 
-      <article class="card goods-card">
-        <img src="../images/goods2.jpg" alt="Товар 2">
-        <div class="card-title">Товар 2</div>
-        <div class="card-price">Цена товара 2</div>
-      </article>
+                        <article class="product-card">
+                            <img class="product-image" src="../images/goods2.jpg" alt="Товар 2">
+                            <h3 class="product-name">Товар 2</h3>
+                            <p class="product-price">2 490 ₽</p>
+                        </article>
 
-      <article class="card goods-card">
-        <img src="../images/goods3.jpg" alt="Товар 3">
-        <div class="card-title">Товар 3</div>
-        <div class="card-price">Цена товара 3</div>
-      </article>
-    </div>
-  </section>
-</main>
+                        <article class="product-card">
+                            <img class="product-image" src="../images/goods3.jpg" alt="Товар 3">
+                            <h3 class="product-name">Товар 3</h3>
+                            <p class="product-price">3 290 ₽</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
 
-    <footer class="footer">Футер</footer>
-  </div>
-</body>
+            <footer class="footer"> <!-- Было: <div class="footer"> -->
+                <p>Футер</p> <!-- Добавили параграф для семантики -->
+            </footer>
+        </div>
+    </body>
 </html>

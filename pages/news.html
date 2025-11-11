@@ -1,48 +1,62 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Новости</title>
-  <link rel="stylesheet" href="../style/styles.css">
-</head>
-<body>
-  <div class="page-container">
-    <div class="header">Хэдер</div>
+<html lang="ru"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Новости</title> 
+        <link rel="stylesheet" href="../style/styles.css"> 
+    </head> 
+    <body> 
+        <!-- Изменение: Заменили div на семантические теги -->
+        <div class="page-container">
+            <header class="header"> <!-- Было: <div class="header"> -->
+                <h1>Новости</h1> <!-- Добавили заголовок для семантики -->
+            </header>
 
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-        <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>
-        <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-        <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-      </ul>
-    </nav>
+            <nav class="nav"> <!-- Было: <div class="nav"> -->
+                <ul class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>  
+                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
 
-    <main class="content">
-      <h1 class="profile-title">Новости проекта</h1>
+            <main class="content"> <!-- Было: <div class="content"> -->
+                <section class="news-container"> <!-- Обертка для новостей (Grid) -->
+                    <article class="news-card"> <!-- Карточка новости -->
+                        <h2 class="news-title">Обновление сайта</h2>
+                        <p class="news-meta">11.11.2025 — Автор: Скворцов А. А.</p>
+                        <p class="news-text">
+                            Добавлены семантические теги, переделана навигация и сетка страниц с использованием
+                            Flex и Grid. Улучшена адаптивность и визуальные эффекты.
+                        </p>
+                    </article>
 
-      <article class="experience-card">
-        <div class="experience-title">Запуск сайта</div>
-        <p class="experience-desc"><i>05.11.2025, автор: Александр</i></p>
-        <p class="experience-desc">Стартовая версия доступна на GitHub Pages.</p>
-      </article>
+                    <article class="news-card">
+                        <h2 class="news-title">Практика №9 завершена</h2>
+                        <p class="news-meta">11.11.2025 — Автор: Скворцов А. А.</p>
+                        <p class="news-text">
+                            Главная, новости, товары и контакты переработаны в соответствии с методическими
+                            рекомендациями: семантика, сетки и единый стиль.
+                        </p>
+                    </article>
 
-      <article class="experience-card">
-        <div class="experience-title">Добавлены товары</div>
-        <p class="experience-desc"><i>02.11.2025, администратор</i></p>
-        <p class="experience-desc">В каталоге появились три новые позиции.</p>
-      </article>
+                    <article class="news-card">
+                        <h2 class="news-title">Скоро модальные окна</h2>
+                        <p class="news-meta">11.11.2025 — Автор: Скворцов А. А.</p>
+                        <p class="news-text">
+                            Следующим шагом станет внедрение формы обратной связи через &lt;dialog&gt; и работа
+                            с доступностью модального окна.
+                        </p>
+                    </article>
+                </section>
+            </main>
 
-      <article class="experience-card">
-        <div class="experience-title">Готовимся к защите</div>
-        <p class="experience-desc"><i>01.11.2025, Александр</i></p>
-        <p class="experience-desc">Верстаем страницы и шлифуем стили.</p>
-      </article>
-    </main>
-
-    <footer class="footer">Футер</footer>
-  </div>
-</body>
+            <footer class="footer"> <!-- Было: <div class="footer"> -->
+                <p>Футер</p> <!-- Добавили параграф для семантики -->
+            </footer>
+        </div>
+    </body>
 </html>
