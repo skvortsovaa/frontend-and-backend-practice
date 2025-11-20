@@ -262,45 +262,77 @@ main.content {
 }
 
 /* ===== ТОВАРЫ ===== */
+/* ===== Блок товаров — современная адаптивная сетка ===== */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    /* 
+        minmax(220px, 1fr) — ширина карточки
+        auto-fit — сетка сама выбирает количество колонок, чтобы красиво вместиться
+    */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+
+    /* Чтобы сетка не была слишком растянутой на огромных мониторах */
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
+/* Карточка товара */
 .product-card {
     background: white;
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
+
+    /* Делаем карточку flex-контейнером */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Чтобы карточки были одинаковые */
+    min-height: 360px;
 }
 
-.product-card:hover { transform: translateY(-5px); }
+/* При наведении */
+.product-card:hover {
+    transform: translateY(-5px);
+}
 
+/* Картинка товара */
 .product-image {
-    width: 200px;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 200px;
+    height: 150px;           /* фиксированная высота — ВАЖНО */
+    object-fit: contain;     /* помещаем картинку по центру */
+    
     margin-bottom: 20px;
-    border: 3px solid #f8f9fa;
+
+    /* центрирование по вертикали */
+    flex-grow: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Название товара */
 .product-name {
     font-size: 18px;
-    color: #2c3e50;
-    margin: 10px 0;
     font-weight: 600;
+    margin: 0 0 6px 0;
+
+    /* Сдвигаем вниз вместе с ценой */
+    margin-top: auto;
 }
 
+/* Цена товара */
 .product-price {
     font-size: 20px;
-    color: #e74c3c;
     font-weight: 700;
-    margin: 5px 0;
+    color: #e74c3c;
+    margin: 0 0 5px 0;
 }
 
 /* ===== КОНТАКТЫ ===== */
