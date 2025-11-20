@@ -1,62 +1,125 @@
 <!DOCTYPE html>
-<html lang="ru"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Новости</title> 
-        <link rel="stylesheet" href="../style/styles.css"> 
-    </head> 
-    <body> 
-        <!-- Изменение: Заменили div на семантические теги -->
-        <div class="page-container">
-            <header class="header"> <!-- Было: <div class="header"> -->
-                <h1>Новости</h1> <!-- Добавили заголовок для семантики -->
-            </header>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+<div class="page">
 
-            <nav class="nav"> <!-- Было: <div class="nav"> -->
-                <ul class="nav-list">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="practices.html">Практики</a></li>  
-                    <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
-                </ul>
-            </nav>
+    <!-- Шапка -->
+    <header class="header">
+        <h1 class="header__title">Новости</h1>
+    </header>
 
-            <main class="content"> <!-- Было: <div class="content"> -->
-                <section class="news-container"> <!-- Обертка для новостей (Grid) -->
-                    <article class="news-card"> <!-- Карточка новости -->
-                        <h2 class="news-title">Обновление сайта</h2>
-                        <p class="news-meta">11.11.2025 — Автор: Скворцов А. А.</p>
-                        <p class="news-text">
-                            Добавлены семантические теги, переделана навигация и сетка страниц с использованием
-                            Flex и Grid. Улучшена адаптивность и визуальные эффекты.
-                        </p>
-                    </article>
+    <!-- Навигация -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav__item nav__item--active">
+                <a class="nav__link" href="news.html">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="practices.html">Практики</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="goods.html">Товары</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="contacts.html">Контакты</a>
+            </li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+    <span id="themeLabel">Тема: светлая</span>
+</button>
 
-                    <article class="news-card">
-                        <h2 class="news-title">Практика №9 завершена</h2>
-                        <p class="news-meta">11.11.2025 — Автор: Скворцов А. А.</p>
-                        <p class="news-text">
-                            Главная, новости, товары и контакты переработаны в соответствии с методическими
-                            рекомендациями: семантика, сетки и единый стиль.
-                        </p>
-                    </article>
+    </nav>
 
-                    <article class="news-card">
-                        <h2 class="news-title">Скоро модальные окна</h2>
-                        <p class="news-meta">11.11.2025 — Автор: Скворцов А. А.</p>
-                        <p class="news-text">
-                            Следующим шагом станет внедрение формы обратной связи через &lt;dialog&gt; и работа
-                            с доступностью модального окна.
-                        </p>
-                    </article>
-                </section>
-            </main>
+    <!-- Основной контент -->
+    <main class="main">
 
-            <footer class="footer"> <!-- Было: <div class="footer"> -->
-                <p>Футер</p> <!-- Добавили параграф для семантики -->
-            </footer>
-        </div>
-    </body>
+        <!-- Блок новостей -->
+        <section class="news">
+            <h2 class="news__title">Последние новости</h2>
+
+            <div class="news__list">
+
+                <!-- Карточка новости -->
+                <article class="news-item">
+                    <h3 class="news-item__title">Обновление портфолио</h3>
+                    <p class="news-item__date">11.11.2025</p>
+                    <p class="news-item__text">
+                        Обновлена главная страница, навигация переведена на методологию БЭМ,
+                        добавлены стили для адаптивного отображения.
+                    </p>
+                </article>
+
+                <!-- Выделенная новость -->
+                <article class="news-item news-item--featured">
+                    <h3 class="news-item__title">Реализовано модальное окно</h3>
+                    <p class="news-item__date">11.11.2025</p>
+                    <p class="news-item__text">
+                        На странице контактов добавлено модальное окно с формой обратной связи
+                        на основе тега &lt;dialog&gt; в рамках практической работы №10.
+                    </p>
+                </article>
+
+                <article class="news-item">
+                    <h3 class="news-item__title">Каталог товаров</h3>
+                    <p class="news-item__date">11.11.2025</p>
+                    <p class="news-item__text">
+                        Страница товаров переведена на универсальный компонент карточки,
+                        реализована адаптивная сетка и выравнивание цены внизу карточки.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Новости</p>
+    </footer>
+
+</div>
+<script>
+function applyTheme(saved) {
+    const body = document.body;
+    const label = document.getElementById("themeLabel");
+
+    if (saved === "dark") {
+        body.classList.add("theme-dark");
+        label.textContent = "Тема: тёмная";
+    } else {
+        body.classList.remove("theme-dark");
+        label.textContent = "Тема: светлая";
+    }
+}
+
+function toggleTheme() {
+    const body = document.body;
+    const label = document.getElementById("themeLabel");
+
+    const isDark = body.classList.toggle("theme-dark");
+    const newTheme = isDark ? "dark" : "light";
+
+    localStorage.setItem("theme", newTheme);
+
+    label.textContent = isDark ? "Тема: тёмная" : "Тема: светлая";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
+});
+</script>
+
+
+</body>
 </html>

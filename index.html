@@ -1,78 +1,142 @@
 <!DOCTYPE html>
-<html lang="ru"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Семестровая работа</title> 
-        <link rel="stylesheet" href="style/styles.css"> 
-    </head> 
-    <body> 
-        <!-- Изменение: Заменили div на семантические теги --> 
-        <div class="page-container"> 
-            
-            <header class="header"> <!-- Было: <div class="header"> --> 
-                <h1>Хэдер</h1> <!-- Добавили заголовок для семантики --> 
-            </header> 
+<html lang="ru">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Моё портфолио</title> 
+    <link rel="stylesheet" href="style/styles.css">
+</head>
 
-            <nav class="nav"> <!-- Было: <div class="nav"> --> 
-                <ul class="nav-list"> 
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>  
-                    <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li> 
-                </ul> 
-            </nav> 
+<body>
+<div class="page">
 
-            <main class="content"> <!-- Было: <div class="content"> --> 
-                
-                <article class="profile-header"> <!-- Было: <div class="profile-header"> --> 
-                    <h1 class="profile-title">Информация об авторе</h1> 
-                    <img class="profile-photo" src="images/photo.png" alt="Фото автора"> 
-                    <h2 class="profile-name">Скворцов Александр Александрович</h2> 
-                    <p class="profile-group">ЭФБО-07-24</p> 
-                </article> 
-                
-                <section class="about-me"> <!-- Было: <div class="about-me"> --> 
-                    <h2>Обо мне</h2> <!-- Добавили заголовок для семантики --> 
-                    <p>Я студент ИПТИП, увлекаюсь веб-разработкой и созданием интерфейсов. 
-                    Изучаю HTML, CSS, JavaScript и основы backend-разработки. 
-                    Стремлюсь к созданию понятных, адаптивных и современных сайтов.</p> 
-                </section> 
-                
-                <section class="skills-container"> <!-- Было: <div class="skills-container"> --> 
-                    <h2>Мои навыки</h2> <!-- Добавили заголовок для семантики --> 
-                    <div class="skills-grid"> <!-- Обертка для Grid --> 
-                        <div class="skill-tag">HTML</div> 
-                        <div class="skill-tag">CSS</div> 
-                        <div class="skill-tag">JavaScript</div> 
-                        <div class="skill-tag">GitHub</div> 
-                    </div> 
-                </section> 
-                
-                <section class="experience-section"> <!-- Было: <div class="experience-section"> --> 
-                    <h2 class="section-title">Мой опыт работы</h2> 
-                    <div class="experience-grid"> <!-- Обертка для Grid --> 
-                        <article class="experience-card"> <!-- Было: <div class="experience-card"> --> 
-                            <h3 class="experience-title">Проект 1</h3> 
-                            <p class="experience-desc">Разработка личного сайта-портфолио с использованием HTML и CSS.</p> 
-                        </article> 
-                        <article class="experience-card"> 
-                            <h3 class="experience-title">Проект 2</h3> 
-                            <p class="experience-desc">Создание адаптивного макета с применением Flex и Grid.</p> 
-                        </article> 
-                        <article class="experience-card"> 
-                            <h3 class="experience-title">Проект 3</h3> 
-                            <p class="experience-desc">Верстка страницы с интерактивными элементами и навигацией.</p> 
-                        </article> 
-                    </div> 
-                </section> 
-            </main> 
+    <!-- Шапка -->
+    <header class="header">
+        <h1 class="header__title">Моё портфолио</h1>
+    </header>
 
-            <footer class="footer"> <!-- Было: <div class="footer"> --> 
-                <p>Футер</p> <!-- Добавили параграф для семантики --> 
-            </footer>     
-        </div> 
-    </body>
+    <!-- Навигация -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+                <a class="nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/news.html">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/practices.html">Практики</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/goods.html">Товары</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="pages/contacts.html">Контакты</a>
+            </li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+    <span id="themeLabel">Тема: светлая</span>
+</button>
+
+
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main">
+
+        <!-- Профиль -->
+        <section class="profile">
+            <div class="profile__card">
+                <img class="profile__photo" src="images/photo.png" alt="Фото">
+                <div class="profile__info">
+                    <h2 class="profile__name">Скворцов Александр</h2>
+                    <p class="profile__group">ЭФБО-07-24</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Обо мне -->
+        <section class="about">
+            <h2 class="about__title">Обо мне</h2>
+            <p class="about__text">
+                Студент ИПТИП, изучаю HTML, CSS, JavaScript и основы backend-разработки.
+                Люблю аккуратные, чистые и удобные сайты.
+            </p>
+        </section>
+
+        <!-- Навыки -->
+        <section class="skills">
+            <h2 class="skills__title">Навыки</h2>
+            <div class="skills__list">
+                <span class="skill skill--html">HTML</span>
+                <span class="skill skill--css">CSS</span>
+                <span class="skill skill--js">JavaScript</span>
+                <span class="skill skill--git">GitHub</span>
+            </div>
+        </section>
+
+        <!-- Проекты -->
+        <section class="projects">
+            <h2 class="projects__title">Проекты</h2>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <h3 class="project-card__title">Личный сайт</h3>
+                    <p class="project-card__desc">Портфолио на HTML и CSS.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-card__title">Адаптивная страница</h3>
+                    <p class="project-card__desc">Grid + Flex, мобильная версия.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3 class="project-card__title">Модальное окно</h3>
+                    <p class="project-card__desc">Практика №10: &lt;dialog&gt;</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Мой сайт</p>
+    </footer>
+
+</div>
+<script>
+function applyTheme(saved) {
+    const body = document.body;
+    const label = document.getElementById("themeLabel");
+
+    if (saved === "dark") {
+        body.classList.add("theme-dark");
+        label.textContent = "Тема: тёмная";
+    } else {
+        body.classList.remove("theme-dark");
+        label.textContent = "Тема: светлая";
+    }
+}
+
+function toggleTheme() {
+    const body = document.body;
+    const label = document.getElementById("themeLabel");
+
+    const isDark = body.classList.toggle("theme-dark");
+    const newTheme = isDark ? "dark" : "light";
+
+    localStorage.setItem("theme", newTheme);
+
+    label.textContent = isDark ? "Тема: тёмная" : "Тема: светлая";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
+});
+</script>
+</body>
 </html>
+
+
 
