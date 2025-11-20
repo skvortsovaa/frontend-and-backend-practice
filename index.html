@@ -1,142 +1,284 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Моё портфолио</title> 
-    <link rel="stylesheet" href="style/styles.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная – Портфолио</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <!-- Bootstrap Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  >
 </head>
+<body class="bg-light">
+<div class="container-fluid p-0">
 
-<body>
-<div class="page">
+  <!-- Header -->
+  <header class="bg-primary text-white py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <h1 class="h3 mb-1">Моё портфолио</h1>
+          <p class="mb-0 opacity-75">Студент-разработчик</p>
+        </div>
+        <div class="col-auto">
+          <span class="badge bg-light text-primary">ЭФБО-07-24</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Шапка -->
-    <header class="header">
-        <h1 class="header__title">Моё портфолио</h1>
-    </header>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Навигация -->
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item nav__item--active">
-                <a class="nav__link" href="index.html">Главная</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="pages/news.html">Новости</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="pages/practices.html">Практики</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="pages/goods.html">Товары</a>
-            </li>
-            <li class="nav__item">
-                <a class="nav__link" href="pages/contacts.html">Контакты</a>
-            </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              <i class="bi bi-house me-1"></i>Главная
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/news.html">
+              <i class="bi bi-newspaper me-1"></i>Новости
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/practices.html">
+              <i class="bi bi-code-slash me-1"></i>Практики
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/goods.html">
+              <i class="bi bi-cart me-1"></i>Товары
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contacts.html">
+              <i class="bi bi-telephone me-1"></i>Контакты
+            </a>
+          </li>
         </ul>
-        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
-    <span id="themeLabel">Тема: светлая</span>
-</button>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Main Content -->
+  <main class="container my-4">
 
-    </nav>
-
-    <!-- Основной контент -->
-    <main class="main">
-
-        <!-- Профиль -->
-        <section class="profile">
-            <div class="profile__card">
-                <img class="profile__photo" src="images/photo.png" alt="Фото">
-                <div class="profile__info">
-                    <h2 class="profile__name">Скворцов Александр</h2>
-                    <p class="profile__group">ЭФБО-07-24</p>
-                </div>
+    <!-- Profile Section -->
+    <section class="mb-5">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <div class="row align-items-center">
+            <div class="col-md-3 text-center mb-3 mb-md-0">
+              <img src="images/photo.png" alt="Фото"
+                   class="img-fluid rounded-circle"
+                   style="width: 150px; height: 150px; object-fit: cover;">
             </div>
-        </section>
-
-        <!-- Обо мне -->
-        <section class="about">
-            <h2 class="about__title">Обо мне</h2>
-            <p class="about__text">
+            <div class="col-md-9">
+              <h2 class="card-title h4 text-primary">Скворцов Александр</h2>
+              <p class="card-text text-muted mb-2">
+                <i class="bi bi-bookmark-check-fill text-primary"></i>
+                Студент группы ЭФБО-07-24
+              </p>
+              <p class="card-text">
                 Студент ИПТИП, изучаю HTML, CSS, JavaScript и основы backend-разработки.
                 Люблю аккуратные, чистые и удобные сайты.
-            </p>
-        </section>
-
-        <!-- Навыки -->
-        <section class="skills">
-            <h2 class="skills__title">Навыки</h2>
-            <div class="skills__list">
-                <span class="skill skill--html">HTML</span>
-                <span class="skill skill--css">CSS</span>
-                <span class="skill skill--js">JavaScript</span>
-                <span class="skill skill--git">GitHub</span>
+              </p>
+              <div class="d-flex gap-2 flex-wrap">
+                <span class="badge bg-primary">HTML/CSS</span>
+                <span class="badge bg-success">JavaScript</span>
+                <span class="badge bg-info text-dark">Bootstrap</span>
+                <span class="badge bg-warning text-dark">GitHub</span>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Проекты -->
-        <section class="projects">
-            <h2 class="projects__title">Проекты</h2>
-            <div class="projects__grid">
-                <article class="project-card">
-                    <h3 class="project-card__title">Личный сайт</h3>
-                    <p class="project-card__desc">Портфолио на HTML и CSS.</p>
-                </article>
+    <!-- About Section -->
+    <section class="mb-5">
+      <div class="card shadow-sm">
+        <div class="card-header bg-light">
+          <h3 class="card-title h5 mb-0">
+            <i class="bi bi-person-circle text-primary"></i>
+            Обо мне
+          </h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            Увлекаюсь веб-разработкой и современными технологиями. В свободное время
+            дорабатываю учебные проекты и пробую новые инструменты.
+          </p>
+          <p class="card-text">
+            Основные интересы: фронтенд-разработка, удобные интерфейсы и работа с
+            пользовательскими сценариями. Стремлюсь делать понятные и аккуратные сайты.
+          </p>
+        </div>
+      </div>
+    </section>
 
-                <article class="project-card">
-                    <h3 class="project-card__title">Адаптивная страница</h3>
-                    <p class="project-card__desc">Grid + Flex, мобильная версия.</p>
-                </article>
-
-                <article class="project-card">
-                    <h3 class="project-card__title">Модальное окно</h3>
-                    <p class="project-card__desc">Практика №10: &lt;dialog&gt;</p>
-                </article>
+    <!-- Skills Section -->
+    <section class="mb-5">
+      <div class="card shadow-sm">
+        <div class="card-header bg-light">
+          <h3 class="card-title h5 mb-0">
+            <i class="bi bi-tools text-primary"></i>
+            Мои навыки
+          </h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span>HTML/CSS</span>
+                  <span class="text-primary">90%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-primary" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span>JavaScript</span>
+                  <span class="text-primary">75%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-success" style="width: 75%"></div>
+                </div>
+              </div>
             </div>
-        </section>
 
-    </main>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span>Bootstrap</span>
+                  <span class="text-primary">85%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-info" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="d-flex justify-content-between mb-1">
+                  <span>Git / GitHub</span>
+                  <span class="text-primary">70%</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                  <div class="progress-bar bg-dark" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
 
-    <!-- Подвал -->
-    <footer class="footer">
-        <p class="footer__text">© 2025 Мой сайт</p>
-    </footer>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="mb-5">
+      <div class="card shadow-sm">
+        <div class="card-header bg-light">
+          <h3 class="card-title h5 mb-0">
+            <i class="bi bi-folder-fill text-primary"></i>
+            Мои проекты
+          </h3>
+        </div>
+        <div class="card-body">
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/project1.jpg" class="card-img-top"
+                     alt="Личный сайт" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Личный сайт</h5>
+                  <p class="card-text small text-muted">
+                    Портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
+                  </p>
+                  <div class="mb-2">
+                    <span class="badge bg-primary">HTML</span>
+                    <span class="badge bg-primary">CSS</span>
+                    <span class="badge bg-primary">Bootstrap</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/project2.jpg" class="card-img-top"
+                     alt="Todo приложение" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Todo-приложение</h5>
+                  <p class="card-text small text-muted">
+                    Приложение для управления задачами с использованием JavaScript.
+                  </p>
+                  <div class="mb-2">
+                    <span class="badge bg-success">JavaScript</span>
+                    <span class="badge bg-success">LocalStorage</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100">
+                <img src="images/project3.jpg" class="card-img-top"
+                     alt="Интернет-магазин" style="height: 150px; object-fit: cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Интернет-магазин</h5>
+                  <p class="card-text small text-muted">
+                    Прототип интернет-магазина с корзиной товаров и фильтрацией.
+                  </p>
+                  <div class="mb-2">
+                    <span class="badge bg-info text-dark">React</span>
+                    <span class="badge bg-info text-dark">API</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="pages/contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+          <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </div>
-<script>
-function applyTheme(saved) {
-    const body = document.body;
-    const label = document.getElementById("themeLabel");
 
-    if (saved === "dark") {
-        body.classList.add("theme-dark");
-        label.textContent = "Тема: тёмная";
-    } else {
-        body.classList.remove("theme-dark");
-        label.textContent = "Тема: светлая";
-    }
-}
-
-function toggleTheme() {
-    const body = document.body;
-    const label = document.getElementById("themeLabel");
-
-    const isDark = body.classList.toggle("theme-dark");
-    const newTheme = isDark ? "dark" : "light";
-
-    localStorage.setItem("theme", newTheme);
-
-    label.textContent = isDark ? "Тема: тёмная" : "Тема: светлая";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    applyTheme(savedTheme);
-});
-</script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
 
 

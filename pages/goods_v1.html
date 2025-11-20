@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body>
+<div class="page">
+
+    <!-- Шапка -->
+    <header class="header">
+        <h1 class="header__title">Каталог товаров</h1>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="news.html">Новости</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="practices.html">Практики</a>
+            </li>
+            <li class="nav__item nav__item--active">
+                <a class="nav__link" href="goods.html">Товары</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="contacts.html">Контакты</a>
+            </li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+    <span id="themeLabel">Тема: светлая</span>
+</button>
+
+    </nav>
+
+    <!-- Основной контент -->
+    <main class="main">
+
+        <!-- Блок каталога -->
+        <section class="catalog">
+            <h2 class="catalog__title">Популярные позиции</h2>
+
+            <div class="catalog__grid">
+
+                <!-- карточка 1 -->
+                <article class="catalog__item card card--product">
+                    <div class="card__media">
+                        <img class="card__image" src="../images/goods1.jpg" alt="Товар 1">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Товар 1</h3>
+                        <p class="card__price">1 990 ₽</p>
+                    </div>
+                </article>
+
+                <!-- карточка 2 -->
+                <article class="catalog__item card card--product">
+                    <div class="card__media">
+                        <img class="card__image" src="../images/goods2.jpg" alt="Товар 2">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Товар 2</h3>
+                        <p class="card__price">2 490 ₽</p>
+                    </div>
+                </article>
+
+                <!-- карточка 3 -->
+                <article class="catalog__item card card--product">
+                    <div class="card__media">
+                        <img class="card__image" src="../images/goods3.jpg" alt="Товар 3">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Товар 3</h3>
+                        <p class="card__price">3 290 ₽</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p class="footer__text">© 2025 Каталог товаров</p>
+    </footer>
+
+</div>
+<script>
+function applyTheme(saved) {
+    const body = document.body;
+    const label = document.getElementById("themeLabel");
+
+    if (saved === "dark") {
+        body.classList.add("theme-dark");
+        label.textContent = "Тема: тёмная";
+    } else {
+        body.classList.remove("theme-dark");
+        label.textContent = "Тема: светлая";
+    }
+}
+
+function toggleTheme() {
+    const body = document.body;
+    const label = document.getElementById("themeLabel");
+
+    const isDark = body.classList.toggle("theme-dark");
+    const newTheme = isDark ? "dark" : "light";
+
+    localStorage.setItem("theme", newTheme);
+
+    label.textContent = isDark ? "Тема: тёмная" : "Тема: светлая";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    applyTheme(savedTheme);
+});
+</script>
+</body>
+</html>
